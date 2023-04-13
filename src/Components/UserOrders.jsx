@@ -4,7 +4,7 @@ function UserOrders({ user }) {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     const fetchOrders = async () => {
-      const response = await fetch("http://localhost:4000/api/getorders", {
+      const response = await fetch("https://tmtdelivery.onrender.com/api/getorders", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

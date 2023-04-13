@@ -17,13 +17,16 @@ function Register() {
   async function formHandler(event) {
     event.preventDefault();
     setLoading(true);
-    const response = await fetch("http://localhost:4000/api/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    const response = await fetch(
+      "https://tmtdelivery.onrender.com/api/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
     const data = await response.json();
     setLoading(false);
     if (data.msg === "saved") {

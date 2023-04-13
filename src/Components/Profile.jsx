@@ -17,7 +17,7 @@ function Profile({ user }) {
   async function handleSubmit(e) {
     e.preventDefault();
     const response = await fetch(
-      `http://localhost:4000/api/users/${user._id}`,
+      `https://tmtdelivery.onrender.com/api/users/${user._id}`,
       {
         method: "PUT",
         headers: {

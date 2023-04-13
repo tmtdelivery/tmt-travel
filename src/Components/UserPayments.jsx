@@ -5,12 +5,15 @@ function UserPayments({ user }) {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     const fetchPayments = async () => {
-      const response = await fetch("http://localhost:4000/api/getpayments", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://tmtdelivery.onrender.com/api/getpayments",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const data = await response.json();
       setPayments(data.filter((payment) => payment.user_id === user._id));
       setIsLoading(false);

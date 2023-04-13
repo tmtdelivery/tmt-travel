@@ -12,7 +12,7 @@ function Login(props) {
   async function formHandler(event) {
     event.preventDefault();
     setLoading(true);
-    const response = await fetch("http://localhost:4000/api/login", {
+    const response = await fetch("https://tmtdelivery.onrender.com/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

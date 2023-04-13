@@ -18,7 +18,7 @@ function Order({ user }) {
   async function handleSubmit(e) {
     window.confirm("Are the details correct");
     e.preventDefault();
-    const response = await fetch("http://localhost:4000/api/orders", {
+    const response = await fetch("https://tmtdelivery.onrender.com/api/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -13,12 +13,15 @@ export default function Payment({ user }) {
   async function handlePayment(event) {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:4000/api/createpayment", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://tmtdelivery.onrender.com/api/createpayment",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const data = await response.json();
       console.log(data);
       const options = {
@@ -31,7 +34,7 @@ export default function Payment({ user }) {
         order_id: `${data.id}`,
         handler: async function (response) {
           const request = await fetch(
-            `http://localhost:4000/api/paymentverification/${user._id}`,
+            `https://tmtdelivery.onrender.com/api/paymentverification/${user._id}`,
             {
               method: "POST",
               headers: {
