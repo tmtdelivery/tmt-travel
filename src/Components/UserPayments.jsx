@@ -76,7 +76,7 @@ function UserPayments({ user }) {
         })}
 
       {payments.length === 0 && (
-        <div className="text-center mt-4 font-bold text-lg">
+        <div className="text-center mt-4 font-bold text-lg min-h-screen">
           No Payments Done Yet...
         </div>
       )}

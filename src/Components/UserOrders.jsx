@@ -4,12 +4,15 @@ function UserOrders({ user }) {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     const fetchOrders = async () => {
-      const response = await fetch("https://tmtdelivery.onrender.com/api/getorders", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://tmtdelivery.onrender.com/api/getorders",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const data = await response.json();
       setOrders(data.filter((order) => order.id === user._id));
     };
@@ -47,7 +50,7 @@ function UserOrders({ user }) {
         })}
 
       {orders.length === 0 && (
-        <div className="text-center mt-4 font-bold text-lg">No Orders...</div>
+        <div className="text-center mt-4 font-bold text-lg  min-h-screen">No Orders...</div>
       )}
     </ul>
   );
