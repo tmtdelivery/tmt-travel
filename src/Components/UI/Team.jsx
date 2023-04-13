@@ -17,8 +17,9 @@ function Team() {
                     <img src={suraj} className="w-full  rounded-xl" />
                     <span className="absolute bottom-0 left-0 right-0 p-2 pt-4 text-white font-medium text-center text-xs bg-gradient-to-t from-gray-900 to-transparent rounded-xl">
                       <h2 className="text-2xl font-bold underline">Suraj</h2>
-                      <p className="text-sm">First year student</p>
-                      <p>Pursuing BMS at Shaheed Sukhdev College of Business Studies (Delhi University).</p>
+                      <p className="text-sm">CEO and Co-Founder</p>
+                      <p>First year student</p>
+                      <p>Pursuing BMS at Shaheed Sukhdev College of Business Studies</p>
                     </span>
                   </div>
                 </div>
@@ -30,8 +31,9 @@ function Team() {
                     <span className="absolute bottom-0 left-0 right-0 p-3 pb-2 pt-4 text-white font-medium text-center text-xs bg-gradient-to-t from-gray-900 to-transparen rounded-xl">
                       {" "}
                       <h2 className="text-2xl font-bold underline">Dheeraj</h2>
-                      <p className="text-sm">First year student</p>
-                      <p>Pursuing BMS at Shaheed Sukhdev College of Business Studies (Delhi University).</p>
+                      <p className="text-sm">Co-Founder</p>
+                      <p>First year student</p>
+                      <p>Pursuing BMS at Shaheed Sukhdev College of Business Studies</p>
                     </span>
                   </div>
                 </div>
