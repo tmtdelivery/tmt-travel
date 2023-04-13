@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 const HomeNavbar = () => {
   return (
@@ -8,25 +8,32 @@ const HomeNavbar = () => {
         <div className="flex items-center justify-between">
           <div>
             <Link
-              className="text-gray-800 font-bold text-xl hover:text-gray-700"
+              className="flex flex-row items-center text-gray-800 font-bold text-xl hover:text-gray-700"
               to="/"
             >
-              <img className="h-14 w-auto" src={logo} alt="logo" />
+              <img className="h-14 w-auto mr-3" src={logo} alt="logo" />
+              <h1 className="hidden lg:block md:block">The Mom's Tiffin</h1>
             </Link>
           </div>
           <div className="flex items-center">
-            <div className="lg:block flex items-center ">
+            <div className="flex items-center ">
               <Link
-                className="text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
+                className="hidden md:block lg:block text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
                 to="/"
               >
                 Home
               </Link>
               <Link
+                className="block text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
+                to="/team"
+              >
+                Team
+              </Link>
+              <Link
                 className="text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
                 to="/aboutus"
               >
-                About Us
+                About
               </Link>
             </div>
 

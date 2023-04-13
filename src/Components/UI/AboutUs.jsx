@@ -58,13 +58,6 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        <div className="bg-gray-800 py-8">
-          <div className="container mx-auto px-4">
-            <p className="text-gray-400 text-center">
-              © 2023 Tmt Delivery. All rights reserved.
-            </p>
-          </div>
-        </div>
       </div>
     </>
   );

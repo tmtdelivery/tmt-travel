@@ -10,9 +10,11 @@ import Profile from "./Components/Profile";
 import Order from "./Components/Order";
 import UserOrders from "./Components/UserOrders";
 import UserPayments from "./Components/UserPayments";
-import LandingPage from "./Components/LandingPage";
-import AboutUs from "./Components/AboutUs";
-import HomeNavbar from "./Components/HomeNavbar";
+import LandingPage from "./Components/UI/LandingPage";
+import AboutUs from "./Components/UI/AboutUs";
+import HomeNavbar from "./Components/UI/HomeNavbar";
+import Footer from "./Components/UI/Footer";
+import Team from "./Components/UI/Team";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -39,6 +41,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/" element={<LandingPage />} />
             <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/team" element={<Team />} />
             <Route
               path="*"
               element={<Login onLogin={handleLogin} setUser={setUser} />}
@@ -61,6 +64,7 @@ function App() {
           </>
         )}
       </Routes>
+      <Footer />
     </>
   );
 }

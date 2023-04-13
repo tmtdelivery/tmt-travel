@@ -1,6 +1,11 @@
 import React from "react";
-import food from "../assets/food.png";
+import food from "../../assets/food.png";
+import samosa from "../../assets/samosa.png";
+import thali from "../../assets/thali.png";
+import painting from "../../assets/painting.png";
+import aaloo from "../../assets/Aaloo.png";
 import { Link } from "react-router-dom";
+
 function LandingPage() {
   return (
     <>
@@ -10,10 +15,10 @@ function LandingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2   items-center">
               <div className="px-6 lg:px-0">
                 <h1 className="text-4xl font-bold mb-6">
-                  Hungry? Get food delivered right to your doorstep
+                  Hungry? Get food delivered right to your location
                 </h1>
                 <p className="text-lg mb-8">
-                  Choose from a wide range of cuisines and restaurants near you
+                  Choose from a wide range of cuisines and deliver to your home or work. Get the monthly membership of the tiffin service
                 </p>
                 <div className="flex">
                   <Link
@@ -26,7 +31,7 @@ function LandingPage() {
               </div>
               <div className="hidden lg:block">
                 <img
-                  src={food}
+                  src={painting}
                   alt="Food delivery"
                   className="w-full h-full object-cover"
                 />
@@ -41,7 +46,7 @@ function LandingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-center">
               <div className="bg-white rounded-lg overflow-hidden shadow-md ">
                 <img
-                  src={food}
+                  src={aaloo}
                   alt="Restaurant"
                   className="w-full h-48 object-cover"
                 />
@@ -78,36 +83,36 @@ function LandingPage() {
               </div>
               <div className="bg-white rounded-lg overflow-hidden shadow-md ">
                 <img
-                  src={food}
+                  src={samosa}
                   alt="Restaurant"
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
                   <h3 className="text-xl font-bold mb-2">
-                    Deliver Food To Your Location
+                    Charged only if ordered
                   </h3>
-                  <p className="text-gray-700 mb-4">Work or Home </p>
+                  <p className="text-gray-700 mb-4">from the portal </p>
                   <div className="flex justify-between items-center">
                     <p className="text-gray-500 font-bold">
-                      You will choose where to deliver on the portal
+                      Otherwise the credits will remain in your account
                     </p>
                   </div>
                 </div>
               </div>
               <div className="bg-white rounded-lg overflow-hidden shadow-md ">
                 <img
-                  src={food}
+                  src={thali}
                   alt="Restaurant"
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
                   <h3 className="text-xl font-bold mb-2">
-                    Deliver Food To Your Location
+                    On Time Delivery
                   </h3>
-                  <p className="text-gray-700 mb-4">Work or Home </p>
+                  <p className="text-gray-700 mb-4">of the food </p>
                   <div className="flex justify-between items-center">
                     <p className="text-gray-500 font-bold">
-                      You will choose where to deliver on the portal
+                      The meal will always be delivered on time if not the full refund of meal is given (T&C apply)
                     </p>
                   </div>
                 </div>
