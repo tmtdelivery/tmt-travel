@@ -24,6 +24,7 @@ function Team() {
                   </div>
                 </div>
               </div>
+
               <div className="h-full w-full md:w-1/2 lg:w-1/3 px-4 filter grayscale hover:grayscale-0  rounded-xl">
                 <div className="bg-white border border-gray-300 shadow-lg rounded-xl  h-full">
                   <div className="relative">
