@@ -15,6 +15,7 @@ import AboutUs from "./Components/UI/AboutUs";
 import HomeNavbar from "./Components/UI/HomeNavbar";
 import Footer from "./Components/UI/Footer";
 import Team from "./Components/UI/Team";
+import Whatsapp from "./Components/UI/Whatsapp";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -65,6 +66,7 @@ function App() {
         )}
       </Routes>
       <Footer />
+      <Whatsapp/>
     </>
   );
 }
