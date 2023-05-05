@@ -97,7 +97,7 @@ function Footer() {
         </p>
       </div>
       <div className="container mx-auto py-4 flex justify-center items-center gap-12">
-        <a href="#" className="w-6 ">
+        <a href="https://www.facebook.com/profile.php?id=100091957285276&mibextid=ZbWKwL" className="w-6 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             data-name="Ebene 1"
@@ -126,7 +126,7 @@ function Footer() {
             ></path>
           </svg>
         </a>
-        <a href="#" className="w-6">
+        <a href="https://instagram.com/tmtdelivers?igshid=ZDdkNTZiNTM=" className="w-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 101.996 102"
@@ -166,7 +166,7 @@ function Footer() {
             ></path>
           </svg>
         </a>
-        <a href="#" className="w-6">
+        <a href="https://wa.me/+917015630741" className="w-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1219.547 1225.016"
