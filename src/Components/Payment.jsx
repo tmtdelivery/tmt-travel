@@ -28,7 +28,7 @@ export default function Payment({ user }) {
         key: "rzp_test_Tvx2WZQliyyszs",
         amount: `${data.amount}`,
         currency: "INR",
-        name: "Tmt Delivery",
+        name: "The Mom Tiffin",
         description: "For 60 Credits of Monthly Membership",
         image: `${logo}`,
         order_id: `${data.id}`,
@@ -73,16 +73,12 @@ export default function Payment({ user }) {
     }
   }
   return (
-    <div className="bg-white pb-24 pt-10 sm:pb-32">
+    <div className="bg-white pb-24 pt-16 sm:pb-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Simple no-tricks pricing
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-            expedita placeat obcaecati hic dolor quibusdam ad sequi numquam,
-          </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
           <div className="p-8 sm:p-10 lg:flex-auto">
@@ -90,9 +86,7 @@ export default function Payment({ user }) {
               Monthly membership
             </h3>
             <p className="mt-6 text-base leading-7 text-gray-600">
-              Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque
-              amet indis perferendis blanditiis repellendus etur quidem
-              assumenda.
+              Get Your Monthly Tiffin By This Membership and Get Rid Off of All The Worries and Distractions Caused By Ordering Your Food.
             </p>
             <div className="mt-10 flex items-center gap-x-4">
               <h4 className="flex-none text-sm font-semibold leading-6 text-indigo-600">

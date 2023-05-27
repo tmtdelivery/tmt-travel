@@ -18,7 +18,8 @@ function LandingPage() {
                   Hungry? Get food delivered right to your location
                 </h1>
                 <p className="text-lg mb-8">
-                  Choose from a wide range of cuisines and deliver to your home or work. Get the monthly membership of the tiffin service
+                  Choose from a wide range of cuisines and deliver to your home
+                  or work. Get the monthly membership of the tiffin service
                 </p>
                 <div className="flex">
                   <Link
@@ -29,13 +30,14 @@ function LandingPage() {
                   </Link>
                 </div>
               </div>
-              <div className="block ">
+              <div className="mt-7 lg:mt-0 md:mt-0">
                 <img
                   src={painting}
                   alt="Food delivery"
-                  className="w-full h-full object-cover mt-7 lg:mt-0 md:mt-0"
+                  className=""
                 />
               </div>
+              
             </div>
           </div>
         </section>
@@ -106,13 +108,11 @@ function LandingPage() {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="text-xl font-bold mb-2">
-                    On Time Delivery
-                  </h3>
+                  <h3 className="text-xl font-bold mb-2">On Time Delivery</h3>
                   <p className="text-gray-700 mb-4">of the food </p>
                   <div className="flex justify-between items-center">
                     <p className="text-gray-500 font-bold">
-                      The meal will always be delivered on time if not the full refund of meal is given (T&C apply)
+                      Lunch (12:00pm to 01:00pm ) Dinner (07:30pm to 08:30pm).
                     </p>
                   </div>
                 </div>
