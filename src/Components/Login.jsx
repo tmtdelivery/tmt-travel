@@ -48,7 +48,7 @@ function Login(props) {
           </div>
         ) : (
           <form className="mt-8 space-y-6" onSubmit={formHandler}>
-            <div className="-space-y-px">
+            <div className="-space-y-px space-y-4">
               <div>
                 <label htmlFor="email-address" className="sr-only">
                   Email address

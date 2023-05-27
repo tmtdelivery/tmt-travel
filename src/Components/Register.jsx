@@ -54,7 +54,7 @@ function Register() {
           </div>
         ) : (
           <form className="mt-8 space-y-6" onSubmit={formHandler}>
-            <div className="-space-y-px rounded-md shadow-sm">
+            <div className="-space-y-px rounded-md shadow-sm space-y-4">
               <div>
                 <label htmlFor="name" className="sr-only">
                   Name

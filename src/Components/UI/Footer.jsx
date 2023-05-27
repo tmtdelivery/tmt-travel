@@ -93,7 +93,7 @@ function Footer() {
       </div>
       <div className="container mx-auto py-4 flex justify-center items-center mt-4">
         <p className="text-sm text-gray-400">
-          The Mom's Tiffin, Sector 11, Rohini, Delhi - 110085
+          The Mom Tiffin, Sector 11, Rohini, Delhi - 110085
         </p>
       </div>
       <div className="container mx-auto py-4 flex justify-center items-center gap-12">
