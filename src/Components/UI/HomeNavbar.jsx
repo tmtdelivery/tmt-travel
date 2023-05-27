@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const HomeNavbar = () => {
   return (
     <nav className="bg-white shadow-lg">
-      <div className="container mx-auto px-6 py-3">
+      <div className="container mx-auto px-3 py-3">
         <div className="flex items-center justify-between">
           <div>
             <Link
@@ -16,7 +16,7 @@ const HomeNavbar = () => {
             </Link>
           </div>
           <div className="flex items-center">
-            <div className="flex items-center ">
+            <div className="flex items-center">
               <Link
                 className="hidden md:block lg:block text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
                 to="/"
@@ -25,15 +25,15 @@ const HomeNavbar = () => {
               </Link>
               <Link
                 className="block text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
-                to="/team"
+                to="/menu"
               >
-                Team
+                Menu
               </Link>
               <Link
                 className="text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
                 to="/aboutus"
               >
-                About
+                About Us
               </Link>
             </div>
 

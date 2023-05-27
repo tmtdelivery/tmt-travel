@@ -2,7 +2,7 @@ import React from "react";
 
 function Whatsapp() {
   return (
-    <div class="fixed bottom-4 left-4 z-10">
+    <div class="fixed bottom-4 right-4 z-10">
       <a
         href="https://wa.me/+917015630741"
         target="_blank"
@@ -11,8 +11,8 @@ function Whatsapp() {
         <div class="bg-green-500 hover:bg-green-600 rounded-full p-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="45"
-            height="45"
+            width="37"
+            height="37"
             viewBox="0 0 24 24"
           >
             <path

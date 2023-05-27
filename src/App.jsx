@@ -14,7 +14,7 @@ import LandingPage from "./Components/UI/LandingPage";
 import AboutUs from "./Components/UI/AboutUs";
 import HomeNavbar from "./Components/UI/HomeNavbar";
 import Footer from "./Components/UI/Footer";
-import Team from "./Components/UI/Team";
+import Menu from "./Components/UI/Menu";
 import Whatsapp from "./Components/UI/Whatsapp";
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/" element={<LandingPage />} />
             <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/team" element={<Team />} />
+            <Route path="/menu" element={<Menu />} />
             <Route
               path="*"
               element={<Login onLogin={handleLogin} setUser={setUser} />}
@@ -66,7 +66,7 @@ function App() {
         )}
       </Routes>
       <Footer />
-      <Whatsapp/>
+      <Whatsapp />
     </>
   );
 }

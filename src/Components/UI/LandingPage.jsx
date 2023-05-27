@@ -29,11 +29,11 @@ function LandingPage() {
                   </Link>
                 </div>
               </div>
-              <div className="hidden lg:block">
+              <div className="block ">
                 <img
                   src={painting}
                   alt="Food delivery"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover mt-7 lg:mt-0 md:mt-0"
                 />
               </div>
             </div>
