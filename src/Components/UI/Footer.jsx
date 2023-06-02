@@ -126,7 +126,7 @@ function Footer() {
             ></path>
           </svg>
         </a>
-        <a href="https://instagram.com/tmtdelivers?igshid=ZDdkNTZiNTM=" className="w-6">
+        <a href="https://www.instagram.com/themomtiffin07/" className="w-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 101.996 102"
