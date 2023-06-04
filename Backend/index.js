@@ -296,6 +296,23 @@ app.get("/api/getpayments", async (req, res) => {
   }
 });
 
+app.put("/api/users/:id/add-credits", (req, res) => {
+  const { id } = req.params;
+  const { credits } = req.body;
+
+  // Find the user by id
+  const user = User.find((customer) => customer._id === id);
+
+  if (!user) {
+    return res.status(404).json({ error: "User not found" });
+  }
+
+  // Add credits to the user
+  user.credits += credits;
+
+  res.json({ success: true });
+});
+
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
