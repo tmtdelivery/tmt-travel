@@ -295,23 +295,31 @@ app.get("/api/getpayments", async (req, res) => {
     res.send(error);
   }
 });
-
-app.put("/api/users/:id/add-credits", (req, res) => {
+app.put("/api/users/:id/add-credits", async (req, res) => {
   const { id } = req.params;
-  const { credits } = req.body;
+  let { addedcredits } = req.body;
 
-  // Find the user by id
-  const user = User.find((customer) => customer._id === id);
+  try {
+    // Find the user by id
+    const user = await User.findById(id);
 
-  if (!user) {
-    return res.status(404).json({ error: "User not found" });
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    // Update the user's credits
+    user.credits += parseInt(addedcredits);
+
+    // Save the updated user
+    await user.save();
+
+    res.json({ success: true });
+  } catch (error) {
+    res.status(500).json({ error: error });
   }
-
-  // Add credits to the user
-  user.credits += credits;
-
-  res.json({ success: true });
 });
+
+
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
