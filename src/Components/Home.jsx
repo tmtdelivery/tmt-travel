@@ -122,6 +122,7 @@ function Home({ user }) {
             <img className="w-10 display-inline" src={clock} alt="clock" />
             <span className="text-red-500 font-medium text-2xl">
               Time Up For This Meal Wait For the Next One
+              <span>You can order between Morning(05:00am - 10:00am) and Evening(03:00pm and 06:00pm)</span>
             </span>
           </div>
         )}

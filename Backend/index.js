@@ -319,7 +319,43 @@ app.put("/api/users/:id/add-credits", async (req, res) => {
   }
 });
 
+app.post("/api/makeorders", async (req, res) => {
+  try {
+    // Find all users who haven't placed an order
+    const users = await User.find({ credits: { $gt: 0 } });
 
+    // Create orders for each user
+    const orderPromises = users.map(async (user) => {
+      // Check if the user has already placed an order with a status other than "delivered"
+      const existingOrder = await Order.findOne({ id: user._id, delivery: { $ne: "delivered" } });
+      if (!existingOrder) {
+        const {name,phone, homeAddress } = user;
+
+        const newOrder = new Order({
+          id: user._id,
+          name,
+          phone,
+          address: homeAddress,
+          date: new Date().toDateString(),
+          delivery: "not delivered",
+          remarks: "",
+        });
+
+        await newOrder.save();
+        user.credits -= 1;
+        await user.save();
+      }
+    });
+
+    // Execute all order creation operations
+    await Promise.all(orderPromises);
+
+    res.status(200).json({ message: "Orders created for eligible users" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
