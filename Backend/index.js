@@ -350,10 +350,10 @@ app.post("/api/makeorders", async (req, res) => {
     // Execute all order creation operations
     await Promise.all(orderPromises);
 
-    res.status(200).json({ message: "Orders created for eligible users" });
+    res.status(200).json({ message: "✅ Orders created for eligible users" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Internal server error" });
+    res.status(500).json({ message: "❌ Internal server error" });
   }
 });
 
