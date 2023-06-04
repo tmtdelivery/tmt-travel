@@ -10,6 +10,10 @@ const includedFeatures = [
 export default function Payment({ user }) {
   const [paymentError, setPaymentError] = useState(null);
 
+  function handleUpiPayment(){
+    window.location.href="/#/upi"
+  }
+
   async function handlePayment(event) {
     event.preventDefault();
     try {
@@ -128,7 +132,7 @@ export default function Payment({ user }) {
                   </span>
                 </p>
                 <button
-                  onClick={handlePayment}
+                  onClick={handleUpiPayment}
                   className="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Get Membership

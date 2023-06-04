@@ -16,6 +16,8 @@ import HomeNavbar from "./Components/UI/HomeNavbar";
 import Footer from "./Components/UI/Footer";
 import Menu from "./Components/UI/Menu";
 import Whatsapp from "./Components/UI/Whatsapp";
+import UpiPayment from "./Components/UpiPayment";
+
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -55,6 +57,7 @@ function App() {
             <Route path="/login" element={<Login onLogin={handleLogin} />} />
             <Route path="/register" element={<Register />} />
             <Route path="/payment" element={<Payment user={user} />} />
+            <Route path="/upi" element={<UpiPayment />}/>
             <Route path="/profile" element={<Profile user={user} />} />
             <Route path="/order" element={<Order user={user} />} />
             <Route path="/orderdetails" element={<UserOrders user={user} />} />
