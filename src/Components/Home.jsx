@@ -113,7 +113,7 @@ function Home({ user }) {
               to="/order"
               className="hover:cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"
             >
-              Order Now
+              Change Location
             </Link>
           </div>
         )}
