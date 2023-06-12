@@ -27,10 +27,10 @@ function AboutUs() {
                     alt="Co-Founder 1"
                     className="w-full mb-4 rounded-lg"
                   />
-                  <p className="text-gray-800 leading-loose font-bold">
+                  <p className="text-gray-800 leading-loose font-bold ">
                     Co-Founder
                   </p>
-                  <p className="text-gray-700 leading-loose">Student at Shaheed Sukhdev College of Business Studies.(DU)<br/>
+                  <p className="text-gray-700 leading-loose italic">Student at Shaheed Sukhdev College of Business Studies.(DU)<br/>
 Pursuing Bachelor's Of Management Studies
                   </p>
                 </div>
@@ -49,7 +49,7 @@ Pursuing Bachelor's Of Management Studies
                   <p className="text-gray-800 leading-loose font-bold">
                     Co-Founder
                   </p>
-                  <p className="text-gray-700 leading-loose">Student at Shaheed Sukhdev College of Business Studies.(DU)<br/>
+                  <p className="text-gray-700 leading-loose italic">Student at Shaheed Sukhdev College of Business Studies.(DU)<br/>
 Pursuing Bachelor's Of Management Studies
                   </p>
                 </div>
