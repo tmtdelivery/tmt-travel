@@ -120,12 +120,12 @@ export default function Payment({ user }) {
                     ₹3,999
                   </span>
                   <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">
-                    (25% off)
+                    (18% off)
                   </span>
                 </p>
                 <p className="mt-2 flex items-baseline justify-center gap-x-2">
                   <span className="text-5xl font-bold tracking-tight text-gray-900">
-                    ₹2,999
+                    ₹3,299
                   </span>
                   <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">
                     INR
