@@ -78,7 +78,7 @@ function Login(props) {
                   id="email-address"
                   name="email"
                   type="email"
-                  value={formData.email}
+                  value={formData.email.toLowerCase()}
                   onChange={handleChange}
                   autoComplete="email"
                   required
