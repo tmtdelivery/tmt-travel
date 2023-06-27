@@ -22,12 +22,22 @@ const HomeNavbar = () => {
           </div>
           <div className="flex items-center">
             <div className="flex items-center">
-              <Link
-                className="hidden md:block lg:block text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
-                to="/"
-              >
-                Home
-              </Link>
+              {user ? (
+                <Link
+                  className="text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
+                  to="/"
+                >
+                  Home
+                </Link>
+              ) : (
+                <Link
+                  className="hidden md:block lg:block text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
+                  to="/"
+                >
+                  Home
+                </Link>
+              )}
+
               <Link
                 className="block text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
                 to="/menu"
