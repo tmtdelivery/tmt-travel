@@ -1,35 +1,55 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/vite.svg";
-
 function Login(props) {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
-  async function formHandler(event) {
-    event.preventDefault();
+  const login = async (data) => {
     setLoading(true);
-    const response = await fetch("https://tmtdelivery.onrender.com/api/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-    const data = await response.json();
-    setLoading(false);
-    if (data.message === "valid") {
-      props.onLogin(true);
-      props.setUser(data.user);
-      localStorage.setItem("user", JSON.stringify(data.user));
-      window.location.href = "/#/user";
-    } else {
-      alert("Incorrect Details");
+    try {
+      const response = await fetch(
+        "https://tmtdelivery.onrender.com/api/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      const responseData = await response.json();
+
+      if (responseData.message === "valid") {
+        props.onLogin(true);
+        props.setUser(responseData.user);
+        localStorage.setItem("user", JSON.stringify(responseData.user));
+        window.location.href = "/#/";
+      } else {
+        alert("Incorrect Details");
+      }
+    } catch (error) {
+      console.log(error);
     }
-  }
+    setLoading(false);
+  };
+
+  const formHandler = (event) => {
+    event.preventDefault();
+    login(formData);
+  };
+
+  useEffect(() => {
+    const userFromStorage = localStorage.getItem("user");
+    if (userFromStorage) {
+      login(JSON.parse(userFromStorage));
+    }
+  }, []);
 
   return (
     <div className="flex mt-2 mb-4 items-start justify-center px-4 py-12 sm:px-6 lg:px-8 bg-gray-50">
@@ -40,10 +60,11 @@ function Login(props) {
           </h2>
         </div>
         {loading ? (
-          <div className=" mt-1 mb-1 flex justify-center items-center backdrop-filter backdrop-blur-lg">
+          <div className="mt-1 mb-1 flex justify-center items-center backdrop-filter backdrop-blur-lg">
             <img
               className="animate-ping transform-origin-center w-1/4 h-1/4"
               src={logo}
+              alt="Logo"
             />
           </div>
         ) : (
@@ -57,7 +78,7 @@ function Login(props) {
                   id="email-address"
                   name="email"
                   type="email"
-                  value={formData.email.toLowerCase()}
+                  value={formData.email}
                   onChange={handleChange}
                   autoComplete="email"
                   required
@@ -71,9 +92,9 @@ function Login(props) {
                 </label>
                 <input
                   id="password"
-                  onChange={handleChange}
                   name="password"
                   value={formData.password}
+                  onChange={handleChange}
                   type="password"
                   autoComplete="current-password"
                   required
@@ -98,7 +119,6 @@ function Login(props) {
               to="/register"
               className="font-medium text-indigo-600 hover:text-indigo-500"
             >
-              {" "}
               Register a new account
             </Link>
           </div>

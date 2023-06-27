@@ -23,13 +23,6 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    const userFromStorage = localStorage.getItem("user");
-    if (userFromStorage) {
-      setUser(JSON.parse(userFromStorage));
-    }
-  }, []);
-
   const handleLogin = (user) => {
     setUser(user);
     setLoggedIn(true);
@@ -53,7 +46,7 @@ function App() {
         )}
         {loggedIn && (
           <>
-            <Route exact path="/user" element={<Home user={user} />} />
+            <Route exact path="/" element={<Home user={user} />} />
             <Route path="/login" element={<Login onLogin={handleLogin} />} />
             <Route path="/register" element={<Register />} />
             <Route path="/payment" element={<Payment user={user} />} />
