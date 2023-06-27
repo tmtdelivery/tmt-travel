@@ -2,11 +2,10 @@ import { Disclosure, Menu } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/logo.png";
 const navigation = [
-  { name: "Home", href: "/#/user", current: false },
+  { name: "Home", href: "/#/", current: false },
   { name: "Orders", href: "/#/orderdetails", current: false },
   { name: "Pay Now", href: "/#/payment", current: false },
   { name: "Payments", href: "/#/paymentdetails", current: false },
-  { name: "SignOut", href: "/#/login", current: false },
 ];
 
 function classNames(...classes) {
@@ -20,7 +19,7 @@ function clickHandler() {
 function signOutHandler() {
   localStorage.removeItem("user");
   window.location.reload(true);
-  window.location.href = "/#/login";
+  window.location.href = "/#/";
 }
 
 export default function Navbar({ user }) {
@@ -134,6 +133,15 @@ export default function Navbar({ user }) {
                   {item.name}
                 </Disclosure.Button>
               ))}
+              <Disclosure.Button
+                key={"7"}
+                as="a"
+                onClick={signOutHandler}
+                className="text-gray-300 hover:bg-gray-700 hover:text-white
+                    block rounded-md px-3 py-2 text-base font-medium"
+              >
+                Sign Out
+              </Disclosure.Button>
             </div>
           </Disclosure.Panel>
         </>
