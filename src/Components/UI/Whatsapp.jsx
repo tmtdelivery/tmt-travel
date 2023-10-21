@@ -4,7 +4,7 @@ function Whatsapp() {
   return (
     <div className="fixed bottom-4 right-4 z-10">
       <a
-        href="https://wa.me/+917015630741"
+        href="https://wa.me/+918287106232"
         target="_blank"
         rel="noopener noreferrer"
       >
